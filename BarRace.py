@@ -1,26 +1,31 @@
+import os
 import re
 import csv
 from collections import defaultdict
 import arrow
+import dotenv
 import urllib.request
 import pylast
 
-API_KEY = "1764f60d7bc132e5cc3539c29af8cfc8"
-API_SECRET = "d3e6dcb78089794298636f3d9875e0c0"
+# Replace with your own LastFm API key and secret
+dotenv.load_dotenv()
+API_KEY = os.getenv('API_KEY')
+API_SECRET = os.getenv('API_SECRET')
 fm = pylast.LastFMNetwork(api_key=API_KEY, api_secret=API_SECRET)
 
 datedefault = 'DD MMM YYYY HH:mm'
 dateformat = 'MMM D YYYY'
+
+# Change the following for personal usage:
 mode = 'artist' # 'artist', 'album', 'track'
-name = 'iamthedj3000'
+name = 'iamthedj3000' # LastFm Username
 threshold = 5 # Minimum amount of plays
-use_tags = True # Include categorization?
+use_tags = True # Toggle categorization
 
 def prepare_csv(filename):
-    """
-    Make sure the header of the csv is the following:
-    artist, album, track, date
-    """
+    # Ensure header of csv file is:
+    # artist, album, track, date
+    
     working_list = []
     all_dates = [mode, 'image', 'genre']
 
@@ -79,7 +84,7 @@ def prepare_csv(filename):
 def extract_image():
     contents = bytes(urllib.request.urlopen(f'https://www.last.fm/user/{name}/library/artists?date_preset=ALL').read()).decode('utf-8')
     pagecount = max(int(i) for i in re.findall('">(\d+)</[ab]>', contents))
-    print(pagecount)
+    print(f'{pagecount} pages to load')
     
     extracted = {}
     for i in range(0, pagecount):
