@@ -8,4 +8,8 @@ Just ensure to add *artist,album,track,date* at the top of the csv file. See my 
 
 Afterwords take the output csv to [Flourish](https://app.flourish.studio). And you will get something like this:
 
-<amp-iframe sandbox='allow-scripts allow-same-origin' layout=responsive resizable noloading src='https://public.flourish.studio/visualisation/1473536/embed?auto=1' width=400 height=300><amp-img layout=fixed height=64 width=64 src='https://public.flourish.studio/resources/bosh.svg' placeholder style='margin: auto'></amp-img><div overflow></div></amp-iframe><p><a href='https://public.flourish.studio/visualisation/1473536/?utm_source=embed&utm_campaign=visualisation/1473536'><amp-img layout=fixed height=16 width=105 src='https://public.flourish.studio/resources/made_with_flourish.svg' alt='Made with Flourish'></amp-img></a></p>
+[![Imgur](https://i.imgur.com/T5HOCXy.png)](https://public.flourish.studio/visualisation/767145/)
+
+---
+
+*[Credit to the original code and post](https://www.reddit.com/r/lastfm/comments/dimkkf/race_bar_chart_for_my_top_tracks_20052019/f3xykgj/)*
