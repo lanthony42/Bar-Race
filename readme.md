@@ -8,7 +8,7 @@ Just ensure to add *artist,album,track,date* at the top of the csv file. See my 
 
 Afterwords take the output csv to [Flourish](https://app.flourish.studio). And you will get something like this:
 
-[![Imgur](https://i.imgur.com/T5HOCXy.png)](https://public.flourish.studio/visualisation/767145/)
+[![Imgur](https://i.imgur.com/oPiM3Pf.png)](https://public.flourish.studio/visualisation/1473536/)
 
 ---
 
